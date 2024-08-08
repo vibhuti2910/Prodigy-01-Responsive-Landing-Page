@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #fead53;
+    --text-dark: #333333;
+    --tex-light: #ffffff33;
+    --extra-light: #f3f4f6;
+
+    --max-width: 1300px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+input::placeholder{
+    color: #f3f4f6;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)), url("one/a.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.nav__logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.nav__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav__links .link{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f3f4f6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav__links .link:hover{
+    color: #fead53;
+}
+
+.search__box{
+    padding: .5rem;
+    color: transparent;
+}
+
+.search__box input{
+    color: #f3f4f6;
+    background-color: #333333;
+    outline: none;
+    border: none;
+}
+
+.search__box i{
+    color: #333333;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem;
+    padding-top: 100px;
+    position: relative;
+}
+
+.container__left,
+.container__right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container__left .content{
+    max-width: 400px;
+    display: grid;
+    gap: 1rem;
+}
+
+.content h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #f3f4f6;
+    font-weight: 700;
+}
+
+.content p{
+    color: #f3f4f6;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.btns button{
+    padding: .5rem 2rem;
+    color: #f3f4f6;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #f3f4f6;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.read__more{
+    background-color: #f3f4f6;
+    color: black;
+}
+
+button.our__blogs:hover{
+    background-color: var(--tex-light)
+    ;
+    color: black;
+}
+
+.chevrons{
+    display: flex;
+    gap: 1rem;
+}
+
+.chev__left{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.chev__right{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.chevrons span{
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+    color: #77849c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #f3f4f6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chevrons span:hover{
+    background-color: var(--tex-light);
+}
+
+.container__right{
+    justify-content: flex-end;
+}
+
+form{
+    width: 350px;
+    display: grid;
+    border-radius: 5px;
+    background-color: var(--tex-light);
+    color: #f3f4f6;
+}
+
+form h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 2rem;
+}
+
+.form__group{
+    display: grid;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.form__group input{
+    padding: .5rem;
+    font-size: 1rem;
+    color: #06080c;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--max-width);
+}
+
+form button{
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #77849c;
+    color: black;
+    cursor: pointer;
+}
+
+.bottom__tracker{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.bottom__tracker span{
+    display: inline-block;
+    height: 4px;
+    width: 100px;
+    background-color: var(--text-light);
+}
+
+.bottom__tracker span:nth-child(2){
+    background-color: #f3f4f6;
+}
